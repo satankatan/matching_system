@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/sitestyle.css">
+    <link rel="icon" href="logo/Settings.ico">
+</head>
+<body>
+    <div class="location-settings-content">
+        <div class="wrapper-settings">
+            <button class="close-button" onclick="redirectToMainPage()">✖</button>
+            <h1 class="name-block-settings">Настройки игрового профиля</h1>
+            <div class="settings-line"></div>
+            <form id="resumeForm">
+                <p class="title-setting-name">Напишите о себе краткое резюме и ИИ подберёт вам игрока</p>
+                <div class="text-area-settings">
+                    <textarea id="resumeText" placeholder="Введите ваши данные в виде резюме (имя, возраст, опыт игры, наигранные часы, игровые характеристики (ранг, звание, ММР, уровень...), какие игровые жанры предпочитаете и т.п.)" required></textarea>
+                </div>
+                <div class="buttons-settings-block">
+                    <button type="button" onclick="location.href='page-design.html'" class="btn-change-wallp-avatar">
+                        Изменить <br> аватар/фон <br> профиля
+                    </button>
+                    <button type="submit" class ="btn-settings">Сохранить</button>
+                    <button type="submit" class ="btn-settings" id="clearDataButton">Очистить данные</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/settings.js"></script>
+    <script src="js/close-button.js"></script>
+
+</body>
+</html>

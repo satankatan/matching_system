@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дизайн страницы</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/sitestyle.css">
+    <link rel="icon" href="logo/Design.ico">
+</head>
+<body>
+    
+    <div class="location-design-profile-content">
+        <button class="close-button" onclick="redirectToMainPage()">✖</button>
+        <div class="block-design-avatar-profile">
+            <p class="design-title-text">Аватар</p>
+            <div class="design-block-line1"></div>
+            <p class="design-normal-text">Выберите аватар <br> своего профиля</p>
+            <div class="wrapper-design-avatar-profile">
+                <div class="btn-avatar">
+                    <button type="button" class="upload-avatar"> 
+                        <div class="circle-design-image">
+                            <img src="img/avatar1.png" alt="">    
+                        </div>
+                    </button>
+                    <p class="design-normal-text">Gamer</p>
+                </div>
+
+                <div class="btn-avatar">
+                    <button type="button" class="upload-avatar"> 
+                        <div class="circle-design-image">
+                            <img src="img/avatar2.png" alt="">    
+                        </div>
+                    </button>
+                    <p class="design-normal-text">Cat</p>
+                </div>
+
+                <div class="btn-avatar">
+                    <button type="button" class="upload-avatar"> 
+                        <div class="circle-design-image">
+                            <img src="img/avatar3.png" alt="">    
+                        </div>
+                    </button>
+                    <p class="design-normal-text">Meme</p>
+                </div>
+
+                <div class="btn-avatar">
+                    <button type="button" class="upload-avatar"> 
+                        <div class="circle-design-image">
+                            <img src="img/avatar4.png" alt="">    
+                        </div>
+                    </button>
+                    <p class="design-normal-text">Gamepad</p>
+                </div>
+                <div class="btn-avatar">
+                    <button type="button" class="upload-avatar"> 
+                        <div class="circle-design-image">
+                            <img src="img/avatar5.png" alt="">    
+                        </div>
+                    </button>
+                    <p class="design-normal-text">Respirator</p>
+                </div>
+                <button type="button" class="import-avatar"> 
+                    Загрузить <br> свой аватар
+                </button>
+            </div>
+        </div>
+        <div class="block-design-wallpaper-profile">
+            <p class="design-title-text">Фон профиля</p>
+            <div class="design-block-line2"></div>
+            <p class="design-normal-text">Выберите фон для страницы <br> своего профиля</p>
+            <div class="wrapper-design-wallpaper-profile">
+                <div class="first-line-buttons">
+                    <button type="button" class="set-wallpaper" id="set-wallp1"> 
+                        <div class="button-image">
+                            <img src="img/Wallpallers.png" alt="">
+                        </div>
+                        <p class="design-normal-text">По умолчанию</p>
+                    </button>
+                    <button type="button" class="set-wallpaper" id="set-wallp2"> 
+                        <div class="button-image">
+                            <img src="img/Neon City.png" alt="">
+                        </div>
+                        <p class="design-normal-text">Cyber City</p>
+                    </button>
+                    <button type="button" class="set-wallpaper" id="set-wallp3"> 
+                        <div class="button-image">
+                            <img src="img/Neon Rays.jpg" alt="">
+                        </div>
+                        <p class="design-normal-text">Neon Rays</p>
+                    </button>
+                </div>
+                <div class="second-line-second">
+                    <button type="button" class="set-wallpaper" id="set-wallp4"> 
+                        <div class="button-image">
+                            <img src="img/Mountains.jpg" alt="">
+                        </div>
+                        <p class="design-normal-text">Mountains</p>
+                    </button>
+                    <button type="button" class="set-wallpaper" id="set-wallp5"> 
+                        <div class="button-image">
+                            <img src="img/Neon Honeycomb.jpg" alt="">
+                        </div>
+                        <p class="design-normal-text">Neon Honeycomb</p>
+                    </button>
+                    <button type="button" id="set-wallp6" class="set-wallpaper"> 
+                        <div class="button-image">
+                            <img src="img/importwallp.png" alt="">
+                        </div>
+                        <p class="design-normal-text">Загрузить свой фон</p>
+                    </button>
+                    <input type="file" id="upload" accept="image/*" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/wallpaper-script.js"></script>
+    <script src="js/close-button.js"></script>
+</body>
+</html>

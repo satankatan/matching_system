@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подбор игроков</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sitestyle.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo/Search.ico') }}">
+</head>
+<body>
+    
+    <div class="location-search-content-1">
+        <div class="search-content">
+            <button class="close-button" onclick="redirectToMainPage()">✖</button>
+            <p class="title-search-text">Подбор игрока</p>
+            <div class="gamer-search-line"></div>
+            <div class="wrapper-gamer-search">
+                <div class="wrapper-point-4">
+                    <p class="title-gamer-search-name">C какой целью вы ищете тиммейта</p>
+                    <div class="gamer-search-line"></div>
+                    <div class="input-box-search-block">            
+                        <input type="text" placeholder="Например, чтобы поднять свой скилл, найти равного по рангу тиммейта" required>
+                    </div>
+                </div>
+                <div class="wrapper-point-5">
+                    <p class="title-gamer-search-name">Как с вами можно связаться</p>
+                    <div class="gamer-search-line"></div>
+                    <div class="input-box-search-block">            
+                        <input type="text" placeholder="Оставьте свой Discord / Steam / Skype" required>
+                    </div>
+                </div>
+                <a href="list-of-applications" class="btn-link">
+                    <!-- ТАКАЯ КНОПКА (button, вместо search) НЕ ПРОВЕРЯЕТ информацию и никуда её не отправляет, нужен JS!!! -->
+                    <button type="submit" class="btn-gamer-search-last-step">
+                        Подтвердить и завершить
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/close-button.js') }}"></script>
+</body>
+</html>

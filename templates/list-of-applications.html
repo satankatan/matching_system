@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты подбора игроков</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sitestyle.css') }}"> 
+    <link rel="icon" href="{{ url_for('static', filename='logo/Search.ico') }}"> 
+
+    <style>
+    </style>
+
+</head>
+<body>
+    
+    <div class="location-list-of-applications">
+        <div class="applications-content">
+            <div class="wrapper-list-of-application">
+                <form>
+                    <p class="title-of-application">Результат</p>
+                    <div class="gamer-search-line"></div>
+                    <div class="gamer-seacrh-line"></div>
+                        <div class="input-box-application-block">
+                            <textarea type="text" id="geminiResponse" readonly>></textarea>
+                        </div>             
+                </form>
+            </div>
+            <button class="btn-gamer-search-last-step" id = "found" onclick="startNewSearch()">Новый поиск</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/close-button.js') }}"></script>
+    <script>
+        function getUrlParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            data : params.get('data')
+        };
+            }
+
+        window.onload = function() {
+        const params = getUrlParams();
+        if (params.data) document.getElementById('geminiResponse').value = params.data;
+        };
+    </script> 
+</body>
+</html>

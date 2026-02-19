@@ -1,0 +1,1219 @@
+.montserrat-alternates-medium {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+.montserrat-alternates-bold {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+html {
+    box-sizing: border-box;
+}
+
+/* Конструкция ниже необходима для правильной настройки элементов (чтобы padding и границы не влияли на размер самого элемента) */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Свойства для изображений: */
+img {
+    display: block;
+    max-width: 100%; /* таким образом изображение может сжиматься под экран, убираем полосу проктрутки*/
+}
+
+body {
+    display: flex;
+    margin: 0px;
+    height: 100vh;
+    /*Задний фон:*/
+    background: url("../img/Wallpallers.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 48px;
+
+    transition: background-image 0.3s ease;
+}
+
+.top-info {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.wrapper {
+    width: 277px;
+    height: 472.41px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    /*Блюр*/
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    /*Закругление блока:*/
+    border-radius: 45px;
+    /*Расположение блока с кнопками:*/
+    margin: 15px 15px 7.5px 15px;
+    padding: 5px;
+}
+
+/* === 🌀Блок с кнопками: === */
+
+.buttons {
+    padding: 5px;
+}
+
+.btn-link {
+    text-decoration: none; /* Удаляет подчеркивание */
+}
+
+.btn {
+    /*Размеры кнопок:*/
+    width: 248.42px;
+    height: 59.26px;
+    background:rgba(255, 255, 255, 0.134);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(35px);
+    border-radius: 50px;
+    color: #fff;
+    padding: 13px; /*сверху, справа, снизу, слева*/
+    display: grid; /*Все кнопки в колонку*/
+    row-gap: 10px;
+    /*Выравниване по вертикали:*/
+    align-items: flex-start;
+
+    margin-bottom: 13.6px;
+    cursor: pointer;
+    
+}
+
+.btn:last-child {
+    margin-bottom: 0px;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фоновый цвет при наведении */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.811); /* Более светлая тень при наведении */
+    border: 4px solid rgba(255, 255, 255, 0.73);
+    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+.btn:active {
+    transform: translateY(4px); /* Продавливаем кнопку вниз */
+    background-color: rgba(0, 0, 0, 0.048);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.button-text {
+    margin: 0 auto;
+    padding-left: 17px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+    
+/*SVG иконки кнопок:*/
+.icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    width: 30.95px;
+    height: 30.95px;
+}
+
+.user-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.transparent-circle {
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    width: 77.79px; /* Ширина круга */
+    height: 77.79px; /* Высота круга, равна ширине */
+    margin: 8px;
+    backdrop-filter: blur(35px);
+
+    background-color: rgba(209, 209, 209, 0.096); /* Полупрозрачный фон (черный с 50% прозрачностью) */
+    border-radius: 50%; /* Создает форму круга */
+    border: 4px solid rgba(255, 255, 255, 0.589); /* Полупрозрачная обводка (белая с 50% прозрачностью) */
+}
+
+.styled-image {
+    position: relative;
+    width: 62.73px;
+    height: 62.73px;
+}
+
+.user-name {
+    font-size: 22px; /* Размер текста */
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700; /* Сделать текст жирным */
+}
+
+/* ======================================== */
+
+.right-block {
+    display: flex;
+    flex-direction: column; 
+}
+
+.wallpaper-block {
+    width: 1590px;
+    height: 250px;
+
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    border-radius: 45px;
+    backdrop-filter: blur(30px);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 15px 15px 15px 0px;
+}
+
+.wallpaper {
+
+    background: url("../img/Wallpallers.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    border-radius: 40px;
+
+    box-sizing: border-box; /* Учитывает padding и border в расчет ширины */
+}
+
+
+.user-description-block {
+    align-items: center;
+    padding: 15px;
+    margin: 0px 15px 15px 0px;
+    width: 1590px;
+    height: 207.41px;
+
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    border-radius: 45px;
+    backdrop-filter: blur(30px);
+
+    z-index: 1;
+}
+
+.name-in-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 180px;
+}
+
+.descr-name {
+    margin: 0;
+    font-size: 22px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+.strip-under-name {
+    height: 3px;
+    width: 150px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+.circle-description {
+    width: 75px;
+    height: 75px;
+    backdrop-filter: blur(35px);
+    padding: 4px;
+
+    background-color: rgba(209, 209, 209, 0.29); /* Полупрозрачный фон (черный с 50% прозрачностью) */
+    border-radius: 50%; /* Создает форму круга */
+    border: 3px solid rgba(255, 255, 255, 0.589); /* Полупрозрачная обводка (белая с 50% прозрачностью) */
+}
+
+.wallpaper-user-image {
+    position: absolute;
+    z-index: 999;
+    top: -50px;
+    left: 80px;
+    transform: scale(1.8);
+}
+
+.user-description {
+    margin: 0;
+    padding: 15px;
+    font-size: 22px; /* Размер текста */
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400; /* Сделать текст жирным */
+}
+
+/* ======================================== */
+
+
+.friends-list-block {
+    display: flex;
+    width: 277px;
+    height: 577.59px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    border-radius: 45px;
+    margin: 7.5px 15px 15px 15px;
+    padding: 5px;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.title-friend-block {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color:#fff;
+    text-align: center;
+    margin: 15px;
+}
+
+.strip-under-title {
+    height: 3px;
+    width: 128px;
+    background-color: #fff;
+    align-items: center;
+}
+
+
+/* ======================================== */
+
+.publications-block {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 0px 15px 15px 0px;
+    width: 1590px;
+    max-height: 577.59px;
+
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    border-radius: 45px;
+    backdrop-filter: blur(30px);
+    flex: 1;
+    justify-content: center;
+}
+
+.publications {
+    font-size: 22px; /* Размер текста */
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700; /* Сделать текст жирным */
+    text-align: center;
+    justify-content: center;
+}
+
+/* ======================================== */
+
+.message-circle {
+    position: absolute;
+    right: 15px; /* Правый край элемента будет расположен у правого края родительского элемента */
+    bottom: 15px;
+}
+
+.icon-circle {
+    width: 45px;
+    height: 45px;
+}
+
+.circle-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 18px 0px 0px 0px;
+    width: 90.79px; /* Ширина круга */
+    height: 90.79px; /* Высота круга, равна ширине */
+    backdrop-filter: blur(35px);
+
+    background-color: rgba(209, 209, 209, 0.096); /* Полупрозрачный фон (черный с 50% прозрачностью) */
+    border-radius: 50%; /* Создает форму круга */
+    border: 4px solid rgba(255, 255, 255, 0.2); /* Полупрозрачная обводка (белая с 50% прозрачностью) */
+}
+
+.circle-wrap:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фоновый цвет при наведении */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.811); /* Более светлая тень при наведении */
+    border: 4px solid rgba(255, 255, 255, 0.73);
+    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+/* ================ НАСТРОЙКИ ================= */
+
+.location-settings-content {
+    display: flex;
+    width: 1157px;
+    margin: auto; /* расположение блока по центру */
+}
+
+.wrapper-settings {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.045);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    /*Блюр*/
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    /*Закругление блока:*/
+    border-radius: 55px;
+    /*Пространство между блоками:*/
+    padding: 5px 35px;
+}
+
+.close-button {
+    position: absolute; /* Позиционируем кнопку абсолютно внутри обёртки */
+    top: 15px; /* Настройте по необходимости */
+    right: 20px; /* Настройте по необходимости */
+    background: transparent; /* Без фона */
+    border: none; /* Без границы */
+    color: #ffffff;
+    font-size: 25px; /* Настройте размер по необходимости */
+    cursor: pointer; /* Измените курсор на указатель */
+}
+
+.name-block-settings {
+    margin-bottom: 15px;
+    padding: 5px;
+    font-size: 28px; /* Размер текста */
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700; /* Сделать текст жирным */
+    text-align: center;
+    justify-content: center;
+    color:#fff;
+}
+
+.title-setting-name {
+    font-size: 24px; /* Размер текста */
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700; /* Сделать текст жирным */
+    text-align: left;
+    justify-content: center;
+    color:#fff;
+    margin: 20px 15px 8px 0px;
+}
+
+.settings-line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    /*Фон полей:*/
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.123);
+    border: none;
+    outline: none;
+    /*Граница полей:*/
+    border: 3px solid rgba(198, 176, 176, 0.745);
+    /*Закругление полей:*/
+    border-radius: 40px;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 40px 10px 20px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.input-box input::placeholder {
+    color:#ffffffc1;
+    font-weight: 100;
+}
+
+.text-area-settings textarea {
+    width: 1080px;  /* Фиксированная ширина */
+    height: 210px; /* Фиксированная высота */
+    resize: none;  /* Отключение возможности изменения размера пользователем */
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.123);
+    border: none;
+    outline: none;
+    border: 3px solid rgba(198, 176, 176, 0.745);
+    border-radius: 40px;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 40px 10px 20px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    box-sizing: border-box; /* Учитываем padding и border в ширину и высоту */
+}
+
+.text-area-settings textarea::placeholder {
+    color:#ffffffc1;
+    font-weight: 100;
+}
+
+.buttons-settings-block {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn-change-wallp-avatar {
+    width: 266px;
+    height: 96px;
+    margin: 15px;
+
+    background:rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    
+    border-radius: 50px;
+    font-size: 16px;
+    color: #fff;
+
+    outline: none;
+    cursor: pointer;
+
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.btn-settings {
+    width: 266px;
+    height: 96px;
+    margin: 15px;
+
+    background:rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    
+    border-radius: 50px;
+    font-size: 16px;
+    color: #fff;
+
+    outline: none;
+    cursor: pointer;
+
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.btn-settings:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фоновый цвет при наведении */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.811); /* Более светлая тень при наведении */
+    border: 4px solid rgba(255, 255, 255, 0.73);
+    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+.btn-change-wallp-avatar:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фоновый цвет при наведении */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.811); /* Более светлая тень при наведении */
+    border: 4px solid rgba(255, 255, 255, 0.73);
+    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+
+.btn-settings:active {
+    transform: translateY(4px); /* Продавливаем кнопку вниз */
+    background-color: rgba(0, 0, 0, 0.048);
+    transition: transform 0.3s, background-color 0.7s;
+}
+
+.btn-change-wallp-avatar:active {
+    transform: translateY(4px); /* Продавливаем кнопку вниз */
+    background-color: rgba(0, 0, 0, 0.048);
+    transition: transform 0.3s, background-color 0.7s;
+}
+
+.button-text {
+    margin: 0 auto;
+    padding-left: 17px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* ================ ПОДБОР ИГРОКА (1 стр) ================= */
+
+.location-search-content-1 {
+    display: flex;
+    justify-content: center;
+    margin: auto; /* расположение блока по центру */
+
+    background: rgba(255, 255, 255, 0.045);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    border-radius: 50px;
+}
+
+.title-search-text {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0px 0px 15px 0px;
+}
+
+.search-content {
+    width: 1250px;
+    text-align: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.title-gamer-search-name {
+    font-size: 24px; /* Размер текста */
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700; /* Сделать текст жирным */
+    text-align: center;
+    justify-content: center;
+    color:#fff;
+    margin: 10px 15px 8px 0px;
+    padding-bottom: 5px;
+}
+
+.gamer-search-line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.btn-gamer-search {
+    width: 400px;
+    height: 82px;
+    margin: 15px;
+
+    background:rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    
+    border-radius: 50px;
+    font-size: 16px;
+    color: #fff;
+
+    outline: none;
+    cursor: pointer;
+
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.btn-gamer-search {
+    width: 400px;
+    height: 62px;
+    margin: 15px;
+
+    background:rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    
+    border-radius: 50px;
+    font-size: 16px;
+    color: #fff;
+
+    outline: none;
+    cursor: pointer;
+
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.btn-gamer-search:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фоновый цвет при наведении */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.811); /* Более светлая тень при наведении */
+    border: 4px solid rgba(255, 255, 255, 0.73);
+    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+.btn-gamer-search:active {
+    transform: translateY(4px); /* Продавливаем кнопку вниз */
+    background-color: rgba(0, 0, 0, 0.048);
+    transition: transform 0.3s, background-color 0.7s;
+}
+
+.btn-gamer-search-next-step {
+    width: 400px;
+    height: 92px;
+    margin: 0;
+    margin-top: 15px; 
+
+    background:rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    
+    border-radius: 50px;
+    font-size: 16px;
+    color: #fff;
+
+    outline: none;
+    cursor: pointer;
+
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.btn-gamer-search-next-step:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фоновый цвет при наведении */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.811); /* Более светлая тень при наведении */
+    border: 4px solid rgba(255, 255, 255, 0.73);
+    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+.btn-gamer-search-next-step:active {
+    transform: translateY(4px); /* Продавливаем кнопку вниз */
+    background-color: rgba(0, 0, 0, 0.048);
+    transition: transform 0.3s, background-color 0.7s;
+}
+
+.text-search-block {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0px 0px 15px 0px;
+}
+
+
+.wrapper-point-1 {
+    position: relative; 
+    z-index: 2; /* Устанавливаем более низкий z-index */
+
+    text-align: center;
+    background: transparent;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    /*Блюр*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    /*Закругление блока:*/
+    border-radius: 45px;
+    /*Пространство между блоками:*/
+    padding: 5px 15px 0px 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.dropdown-content {
+    position: absolute;
+    min-width: 160px;
+    max-height: 190px;
+    padding: 5px 5px 5px 10px;
+    
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    background-color: #49434ae4 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    /*Закругление блока:*/
+    border-radius: 35px;
+    z-index: 10; /* наложение поверх других */
+
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #9ec1c37e;
+    border-radius: 35px;
+}
+
+/* Стиль колеса прокрутки в списке игр: */
+
+.dropdown-content::-webkit-scrollbar {
+    width: 12px; /* Ширина полосы прокрутки */
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background-color: rgba(75, 74, 74, 0.441); /* Цвет ползунка с прозрачностью */
+    border-radius: 10px; /* Закругление углов ползунка */
+    border: 4px solid rgba(255, 255, 255, 0.328);
+}
+
+.dropdown-content::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Изменяем цвет при наведении */
+}
+
+.wrapper-point-2 {
+    position: relative; 
+    z-index: 1; /* Устанавливаем более низкий z-index */
+
+    text-align: center;
+    background: transparent;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    /*Блюр*/
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    /*Закругление блока:*/
+    border-radius: 45px;
+    /*Пространство между блоками:*/
+    padding: 5px 15px 0px 15px;
+    margin-bottom: 15px;
+}
+
+.wrapper-point-3 {
+    position: relative;
+    z-index: 1; /* Устанавливаем более низкий z-index */
+
+    text-align: center;
+    background: transparent;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    /*Блюр*/
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    /*Закругление блока:*/
+    border-radius: 45px;
+    /*Пространство между блоками:*/
+    padding: 5px 15px 0px 15px;
+}
+
+.input-box-search-block  {
+    position: relative;
+    margin: 15px 0px 15px 0px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.input-box-search-block input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    /*Фон полей*/
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.123);
+    border: none;
+    outline: none;
+    /*Граница полей*/
+    border: 3px solid rgba(198, 176, 176, 0.745);
+    /*Закругление полей*/
+    border-radius: 40px;
+    font-size: 22px;
+    color: #fff;
+    padding: 15px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.input-box-search-block input::placeholder {
+    color:#ffffffc1;
+    font-weight: 100;
+}
+
+/* ================ ПОДБОР ИГРОКА (2 стр) ================= */
+
+.wrapper-point-4 {
+    text-align: center;
+    background: transparent;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    /*Блюр*/
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    /*Закругление блока:*/
+    border-radius: 45px;
+    /*Пространство между блоками:*/
+    padding: 5px 15px 0px 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.wrapper-point-5 {
+    text-align: center;
+    background: transparent;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    /*Блюр*/
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    /*Закругление блока:*/
+    border-radius: 45px;
+    padding: 5px 15px 0px 15px;
+}
+
+.btn-gamer-search-last-step {
+    width: 400px;
+    height: 62px;
+    margin: 0;
+    margin-top: 15px; 
+
+    background:rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    
+    border-radius: 50px;
+    font-size: 16px;
+    color: #fff;
+
+    outline: none;
+    cursor: pointer;
+
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.btn-gamer-search-last-step:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фоновый цвет при наведении */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.811); /* Более светлая тень при наведении */
+    border: 4px solid rgba(255, 255, 255, 0.73);
+    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+/* ================ СПИСОК ЗАЯВОК ================= */
+
+
+
+
+/* ================ ДИЗАЙН ПРОФИЛЯ ================= */
+
+.location-design-profile-content {
+    display: flex;
+    justify-content: center;
+    margin: auto; /* расположение блока по центру */
+}
+
+.block-design-avatar-profile {
+    margin: 15px 7.5px 15px 15px;
+}
+
+.block-design-wallpaper-profile {
+    margin: 15px 7.5px 15px 15px;
+}
+
+.wrapper-design-avatar-profile {
+    background: rgba(255, 255, 255, 0.045);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    border-radius: 50px;
+    padding-right: 15px;
+}
+
+.wrapper-design-wallpaper-profile {
+    background: rgba(255, 255, 255, 0.045);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    border-radius: 50px;
+    padding-bottom: 15px;
+}
+
+.design-title-text {
+    display: flex;
+    font-family: 'Montserrat Alternates', sans-serif;
+
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    justify-content: center;
+    margin: 0px;
+    padding-bottom: 15px;
+}
+
+.btn-avatar {
+    display: flex;
+}
+
+.design-normal-text {
+    display: flex;
+    font-size: 24px; /* Размер текста */
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 100; /* Сделать текст жирным */
+
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color:#fff;
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.design-block-line1 {
+    display: flex;
+    width: 70%;
+    height: 3px;
+    
+    align-items: center;
+    margin: 0 auto;
+
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.design-block-line2 {
+    display: flex;
+    width: 20%;
+    height: 3px;
+    
+    align-items: center;
+    margin: 0 auto;
+
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.first-line-first {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.second-line-buttons {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.set-wallpaper {
+    padding: 2.5px;
+    justify-content: center;
+    width: 415px;
+    height: 239px;
+    margin: 15px;
+
+    background:rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    
+    border-radius: 50px;
+}
+
+.button-image {
+    margin: 0px auto;
+    border-radius: 45px;
+    overflow: hidden;
+}
+
+.upload-avatar {
+    margin: 0px;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 15px;
+
+    background:rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.266);
+    
+    border-radius: 50px;
+}
+
+.upload-avatar:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фоновый цвет при наведении */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.811); /* Более светлая тень при наведении */
+    border: 4px solid rgba(255, 255, 255, 0.73);
+    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s;
+    
+}
+
+.set-wallpaper:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фоновый цвет при наведении */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.811); /* Более светлая тень при наведении */
+    border: 4px solid rgba(255, 255, 255, 0.73);
+    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+.import-avatar {
+    justify-content: center;
+    width: 95%;
+    height: 80px;
+    margin: 15px;
+
+    background:rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.266);
+    
+    border-radius: 50px;
+
+    display: flex;
+    font-size: 24px; /* Размер текста */
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 100; /* Сделать текст жирным */
+
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color:#fff;
+}
+
+.import-avatar:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Легкий фоновый цвет при наведении */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.811); /* Более светлая тень при наведении */
+    border: 4px solid rgba(255, 255, 255, 0.73);
+    transition: background-color 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+.import-wallpaper {
+    justify-content: center;
+
+    display: flex;
+    font-size: 24px; /* Размер текста */
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 100; /* Сделать текст жирным */
+
+    color:#fff;
+}
+
+
+.circle-design-image {
+    margin: 0px auto;
+    border-radius: 45px;
+    overflow: hidden;
+}
+
+.upload-wallpaper {
+    justify-content: center;
+    width: 415px;
+    height: 239px;
+    margin: 15px;
+
+    background:rgba(255, 255, 255, 0.134);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    
+    border-radius: 50px;
+    top: -20px;
+}
+
+/* --------- list of applications -------- */
+.location-list-of-applications {
+    display: flex;
+    justify-content: center;
+    margin: auto; /* расположение блока по центру */  
+}
+
+.applications-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1000px;
+    background: rgba(255, 255, 255, 0.045);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border: 4px solid rgba(255, 255, 255, 0.115);
+    border-radius: 50px;
+    padding: 10px;  
+}
+
+.title-of-application {
+    font-size: 24px; /* Размер текста */
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700; /* Сделать текст жирным */
+    text-align: center;
+    justify-content: center;
+    color:#fff;
+    margin: 10px 15px 8px 0px;
+}
+
+.applcations-line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 10px;    
+}
+
+.wrapper-list-of-applications {
+    width: 277px;
+    height: 472.41px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    /*Блюр*/
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    /*Закругление блока:*/
+    border-radius: 45px;
+    /*Расположение блока с кнопками:*/
+}
+  
+.input-box-application-block textarea{
+    width: 950px;
+    height: 185px; 
+    resize: none;  
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.123);
+    
+    border: none;
+    outline: none;
+  
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Montserrat Alternates', sans-serif;
+    box-sizing: border-box; /* Учитываем padding и border в ширину и высоту */
+    padding: 10px 40px 10px 20px;
+    outline: none;
+    margin-top: 15px;
+}
+
+.input-box-application-block::-webkit-scrollbar {
+    width: 12px; /* Ширина полосы прокрутки */
+}
+  
+.input-box-application-block::-webkit-scrollbar-thumb {
+    background-color: rgba(75, 74, 74, 0.441); /* Цвет ползунка с прозрачностью */
+    border-radius: 10px; /* Закругление углов ползунка */
+    border: 4px solid rgba(255, 255, 255, 0.328);
+}
+  
+.input-box-application-block::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Изменяем цвет при наведении */
+}
+  
+
+
+
+

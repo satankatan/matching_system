@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teammate Gaming Search - Регистрация</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo/Logo.ico') }}">
+</head>
+<body>
+    <div class="registration-block-location">
+        <div class="wrapper-registration">
+            <h1>Регистрация</h1>
+            <form id="registerForm"> 
+                <div class="reg-input-text">            
+                    <input type="text" name="username" placeholder="Введите логин" required>
+                </div>
+                <div class="reg-input-text">            
+                    <input type="email" name="email" placeholder="Введите e-mail" required> 
+                </div>
+                <div class="reg-strip"></div>
+                <div class="reg-input-text">            
+                    <input type="password" name="password" placeholder="Введите пароль" required> 
+                </div>
+                <div class="reg-input-text">            
+                    <input type="password" name="confirm_password" placeholder="Повторите пароль" required>
+                </div>
+                <div class="wrapper-select-game">
+                    <span id="selectedGame" class="selected-game"></span>
+                    <button id="addGameButton" class="plus-button">+</button>
+                    <div id="gameDropdown" class="dropdown-content" style="display: none;">
+                        <a href="#" class="game-option">Apex Legends</a>
+                        <a href="#" class="game-option">Counter-Strike 2</a>
+                        <a href="#" class="game-option">Dota 2</a>
+                        <a href="#" class="game-option">Deadlock</a>
+                        <a href="#" class="game-option">League of Legends</a>
+                        <a href="#" class="game-option">PUBG</a>
+                        <a href="#" class="game-option">Valorant</a>
+                    </div>
+                </div>
+                <button type="submit" class="reg-btn">Регистрация</button>
+            </form>
+        </div>
+        <div class="wrapper-reg-game-info">
+            <h1>Заполните игровые <br> характеристики по <br> выбранной игре</h1>
+            <p class="registration-text">Выбранная игра:</p>
+            <p class="game-name-text" id="gameameDiNsplay">Не выбрана</p>
+            <div class="level-input-text">            
+                <input type="text" name="range-in-game" placeholder="Введите уровень, ММР..." required>
+            </div>
+            <div class="big-reg-input-text">            
+                <textarea placeholder="Введите ваш стиль игры" required></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/plus-button.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/selected-game.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+</body>
+</html>
